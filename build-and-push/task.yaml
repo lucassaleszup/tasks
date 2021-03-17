@@ -9,9 +9,9 @@ spec:
   - name: source
   params:
   - name: projectName
-    value: $(params.projectName)
+    type: string
   - name: revision
-    value: $(params.branch-name)
+    type: string
   steps:
   - name: build-and-push
     image: docker.io/docker:latest
