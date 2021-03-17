@@ -10,8 +10,10 @@ spec:
   params:
   - name: name
     type: string
+    default: ""
   - name: revision
     type: string
+    default: ""
   steps:
   - name: build-and-push
     image: docker.io/docker:latest
