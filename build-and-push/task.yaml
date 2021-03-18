@@ -16,7 +16,7 @@ spec:
     default: ""
   steps:
   - name: build-and-push
-    image: docker.io/docker:latest
+    image: docker.io/docker:19-dind
     workingDir: $(workspaces.source.path)
     script: |
       docker login --username=mayconjrpacheco --password=23224c83-f9fd-4718-a99d-7b08ba951de9
