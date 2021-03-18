@@ -19,6 +19,7 @@ spec:
     image: docker.io/docker:19-dind
     workingDir: $(workspaces.source.path)
     script: |
+      docker ps
       docker login --username=mayconjrpacheco --password=23224c83-f9fd-4718-a99d-7b08ba951de9
       docker build -t mayconjrpacheco/pipes/$(params.name):$(params.revision) -f ./cmd/Dockerfile .
       docker push mayconjrpacheco/pipes/$(params.name):$(params.revision)
